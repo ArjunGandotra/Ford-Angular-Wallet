@@ -9,11 +9,11 @@ export class WalletService{
   wallet:Wallet[] = [];
 
   constructor() {
-    this.wallet.push(new Wallet(1, "kaju", 10000));
-    this.wallet.push(new Wallet(2, "arjun", 20000));
-    this.wallet.push(new Wallet(3, "shruti", 30000));
-    this.wallet.push(new Wallet(4, "soham", 40000));
-    this.wallet.push(new Wallet(5, "priyal", 50000));
+    this.wallet.push(new Wallet(1, "kaju", 100000));
+    this.wallet.push(new Wallet(2, "arjun", 200000));
+    this.wallet.push(new Wallet(3, "shruti", 300000));
+    this.wallet.push(new Wallet(4, "soham", 400000));
+    this.wallet.push(new Wallet(5, "priyal", 500000));
 
    }
   

@@ -10,15 +10,14 @@ import { DisplayAllWalletsComponent } from './components/display-all-wallets/dis
 import { ShowAllWalletsComponent } from './components/show-all-wallets/show-all-wallets.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'/home', pathMatch:'full'}, //redirect to first component
+  {path:'', redirectTo:'/home', pathMatch:'full'},
   {path :'home', component: HomeComponent},
   {path: 'login', component:LoginComponent},
   {path: 'demo', component:DemoComponent},
   {path: 'registration', component:RegistrationComponent},
-  // {path:'**', component:PageNotFoundComponent}, //wildcard route for a 404 page
   {path:'details/:name', component:DetailsComponent}, 
   {path:'wallet', component:DisplayAllWalletsComponent},
-  // {path: 'show', component:ShowAllWalletsComponent}
+  
 ];
 
 @NgModule({
