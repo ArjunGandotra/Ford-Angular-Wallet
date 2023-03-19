@@ -17,9 +17,9 @@ export class WalletService{
     this.wallet.push(new Wallet(5, "priyal", 500000));
 
    }
-  
 
-  getAllWallets():Wallet[]{
+
+   getAllWallets():Wallet[]{
     return this.wallet;
     console.log(this.wallet);
 
@@ -31,5 +31,9 @@ export class WalletService{
 
   updateWallet():void{
     console.log("Wallet Updated");
+  }
+
+  addFunds():void{
+    console.log("Funds Tranfered");
   }
 }

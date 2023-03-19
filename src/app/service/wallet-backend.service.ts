@@ -32,5 +32,18 @@ export class WalletBackendService {
 
   }
 
+  addFunds(id?:number,balance?:number):Observable<any>{
+    return this.httpClient.patch(""+id+"?balance="+balance,Wallet);
+    
+  }
+
+  withdrawFunds(id?:number,balance?:number):Observable<any>{
+    return this.httpClient.patch(""+id+"?balance="+balance,Wallet)
+  }
+
+  tranferFunds(fromId?:number,toId?:number, balance?:number):Observable<any>{
+    return this.httpClient.patch(""+balance,Wallet);
+  }
+
 
 }
