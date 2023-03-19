@@ -4,14 +4,6 @@
 <div>
     <form class = "box" >
     
-        <!-- <br><br>
-        <label for = "id">Id : </label><br>
-        <input type="number" [(ngModel)]="wallet.id" #idRef="ngModel" name="wname" id="wid" min = 0
-        title="Enter positive id only" required>
-        <div *ngIf="idRef.invalid && (idRef.touched || idRef.dirty)">
-            <p *ngIf="idRef.errors?.['required']" class="text-danger">Id is required, cant be balnk.</p>
-            <p *ngIf="idRef.errors?.['min']" class="text-danger">Id nust be a positive number</p>
-        </div> -->
         <label for = "name">Name : </label> <br>
         <input type="text" [(ngModel)] = "wallet.name" #nameRef = "ngModel" name = "wname" id = "wid" pattern="[a-zA-Z]{3,}" required>
         <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
@@ -34,8 +26,13 @@
         </div>
 
         <br><br>
-        <!-- <label for = "date">Date Of Creation :</label> <br>
-        <input type="date" [(ngModel)]= "wallet.doc"> -->
+    
         <input type = "button" (click) = "submitForm()" value = "submit">
     </form>
+</div>
+<div *ngIf= "msg" class="alert alert-success" >
+    <p class="">{{msg}}</p>
+</div>
+<div *ngIf= "errormsg" class="alert alert-danger">
+    <p>{{errormsg}}</p> 
 </div>
