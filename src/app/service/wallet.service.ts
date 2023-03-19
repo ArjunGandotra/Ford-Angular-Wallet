@@ -8,6 +8,7 @@ export class WalletService{
 
   wallet:Wallet[] = [];
 
+
   constructor() {
     this.wallet.push(new Wallet(1, "kaju", 100000));
     this.wallet.push(new Wallet(2, "arjun", 200000));
@@ -27,5 +28,8 @@ export class WalletService{
   addWallet(newWallet:Wallet):void{
     this.wallet.push(newWallet);
   }
-}
 
+  updateWallet():void{
+    console.log("Wallet Updated");
+  }
+}

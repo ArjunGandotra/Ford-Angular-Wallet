@@ -10,10 +10,17 @@ export class WalletBackendService {
 
   constructor(private httpClient:HttpClient) { }
 
+  getWalletById(id:string|null):Observable<any>{
+    return this.httpClient.get(""+id);
+  }
+
   addWallet(newWallet:Wallet):Observable<any>{
     let url:string = "";
     return this.httpClient.post(url,newWallet,{responseType:'json'});
 
+  }
+  updateWallet(wallet:Wallet):Observable<any>{
+    return this.httpClient.put("",wallet);
   }
 
   getAllWallets():Observable<any>{
